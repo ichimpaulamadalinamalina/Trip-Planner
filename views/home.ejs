@@ -1,0 +1,59 @@
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAE45Ypp2Kre0IDPsnjPYAUG1XRMvdXE6Q&callback=initMap&libraries=&v=weekly"
+  defer>
+  </script>
+<script src="index.js"></script>
+<div class="wrapper">
+  <div class="classflex">
+    <h2 class="animate-title">oLive Trip Planner</h2>
+    <div>
+      <div id="floating-panel">
+        <input id="address" type="textbox" value="Choose a city" />
+        <input id="submit-btn" type="button" value="Place city" />
+      </div>
+    </div>
+    <div class="container">
+      <div class="images" id="atraction-list">
+        <!-- Full-width images with number text -->
+      </div>
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      <!-- Image text -->
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+      <!-- Thumbnail images -->
+      <div class="row" id="thumb-images">
+      </div>
+    </div>
+    <div class="flex_mode">
+      <input id="mode-btn" type="button" value="Travel Mode" />
+      <button style='font-size:24px' id="walking-btn"><i class='fas fa-street-view'></i></button>
+      <button style='font-size:24px ' id="driving-btn" class="drive"><i class='fas fa-car-alt'></i></button>
+    </div>
+    <div class="nfo">
+      <div class="ga-info">
+        <p>Status: <span id="status">&nbsp;</span></p>
+      </div>
+      <div class="ga-info" class="time">
+        <p>Travel time:<br /><br /><span id="best-time">&nbsp;</span></p>
+      </div>
+    </div>
+    <button class="generation-button" id="delete">Delete route</button>
+    <div class="buttones">
+      <button class="generation-button" id="points">Place points</button>
+      <button class="generation-button" id="find-route">Create route</button>
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="text-modal"></p>
+      </div>
+    </div>
+  </div>
+  <div id="map"></div>
+
+</div>
